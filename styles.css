@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Alinea el contenido en la parte superior de la pantalla */
+    min-height: 100vh;
+    background-image: url('https://imgur.com/49FBxs5.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.logo-and-mascot {
+    display: flex;
+    flex-direction: column; /* Apila el logo y la mascota verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+}
+
+.logo {
+    width: 900px; /* Ajusta el tamaño del logo según tus preferencias */
+}
+
+.mascot {
+    width: 300px; /* Ajusta el tamaño de la mascota según tus preferencias */
+}
+
+.container {
+    text-align: center;
+    font-family: "Couture", sans-serif;
+    color: white;
+}
+
+.invitation-link {
+    margin-top: 20px; /* Ajusta la distancia entre el enlace y la parte superior de la pantalla */
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: white; /* Cambia el color del texto según tus preferencias */
+    border: 2px solid white; /* Agrega un borde negro de 2 píxeles alrededor del texto */
+    border-inline: black;
+    padding: 5px 10px; /* Añade un espacio de relleno para que el borde no esté muy cerca del texto */
+    transition: color 0.3s, border-color 0.3s; /* Agrega transiciones de color y borde */
+}
+
+.invitation-link:hover {
+    color: rgb(216, 184, 3); /* Cambia el color al pasar el mouse sobre el enlace */
+    border-color: rgb(216, 184, 3); /* Cambia el color del borde al pasar el mouse sobre el enlace */
+}
