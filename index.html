@@ -13,7 +13,28 @@
             <img src="https://i.imgur.com/Qgs8Pl2.png" alt="Logo de tu servidor" class="logo">
             <img src="https://imgur.com/4xdvbHK.png" alt="Mascota del servidor" class="mascot">
         </div>
-        <a href="https://discord.gg/9Uq4xkx9ne" class="invitation-link">Invitacion</a>
+        <div class="button-container">
+            <a href="https://discord.gg/9Uq4xkx9ne" class="invitation-link">Invitacion</a>
+            <div class="toggle-info" onclick="toggleInfo()">Info</div>
+        </div>
+        <div class="info-container">
+            <div class="info-text">
+                ¡Bienvenido a Cutemoon! Somos una comunidad de arte y GFX en Discord.
+                ¡Aqui podras encontrar todos los recursos que necesitas para crear tu arte propia o incluso tu propia shop!
+            </div>
+        </div>
     </div>
+    <script>
+        function toggleInfo() {
+            const infoContainer = document.querySelector('.info-container');
+            infoContainer.classList.toggle('active');
+        }
+
+        function scrollToInfo() {
+            const infoContainer = document.querySelector('.info-container');
+            infoContainer.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>
+

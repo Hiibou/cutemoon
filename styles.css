@@ -19,7 +19,7 @@ body {
 }
 
 .logo {
-    width: 900px; /* Ajusta el tamaño del logo según tus preferencias */
+    width: 650px; /* Ajusta el tamaño del logo según tus preferencias */
 }
 
 .mascot {
@@ -32,8 +32,15 @@ body {
     color: white;
 }
 
-.invitation-link {
-    margin-top: 20px; /* Ajusta la distancia entre el enlace y la parte superior de la pantalla */
+.button-container {
+    display: flex;
+    flex-direction: column; /* Alinea los botones verticalmente */
+    align-items: center; /* Centra los botones horizontalmente */
+    margin-top: 20px; /* Ajusta la distancia entre los botones y la parte superior de la pantalla */
+}
+
+.invitation-link,
+.toggle-info {
     text-decoration: none;
     font-size: 24px;
     font-weight: bold;
@@ -42,9 +49,30 @@ body {
     border-inline: black;
     padding: 5px 10px; /* Añade un espacio de relleno para que el borde no esté muy cerca del texto */
     transition: color 0.3s, border-color 0.3s; /* Agrega transiciones de color y borde */
+    margin-bottom: 10px; /* Ajusta la distancia entre los botones */
 }
 
-.invitation-link:hover {
-    color: rgb(216, 184, 3); /* Cambia el color al pasar el mouse sobre el enlace */
-    border-color: rgb(216, 184, 3); /* Cambia el color del borde al pasar el mouse sobre el enlace */
+.invitation-link:hover,
+.toggle-info:hover {
+    color: rgb(216, 184, 3); /* Cambia el color al pasar el mouse sobre los botones */
+    border-color: rgb(216, 184, 3); /* Cambia el color del borde al pasar el mouse sobre los botones */
+}
+
+.info-container {
+    display: none; /* Oculta el contenedor del texto informativo por defecto */
+}
+
+/* Agrega una animación al mostrar/ocultar el texto informativo */
+.info-container.active {
+    display: block;
+    animation: slideIn 1s ease-in-out; /* Agrega una animación de deslizamiento al mostrar */
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
 }
